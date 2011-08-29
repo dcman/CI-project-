@@ -1,0 +1,14 @@
+/* CSS Document */
+body { margin:0px; background-color:#eeeeee;}
+.head_link{padding-top:12px;}
+.head_link a{ padding-top:10px; font-size:11px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; text-decoration:none;}
+.head_link a:hover{color:#FF0000;}
+.text td h1 {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; display:inline; font-weight:bold; margin-left:10px;}
+.text td { font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#333333; text-align:justify;
+}
+.bot td { font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;}
+.bot td a{ text-decoration:none; color:#ffffff; padding-left:10px;}
+.bot {font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000;}
+.right_nav { background-image:url(../images/bg_line.gif); background-repeat:no-repeat; background-position:bottom left; height:28px;}
+.right_nav a{ font-family:Tahoma, Helvetica, sans-serif; font-size:11px; font-weight:bold; text-decoration:none; color:#333333;}
+.right_nav a:hover{color:#5eb5ff;}
