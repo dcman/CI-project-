@@ -1,0 +1,29 @@
+<h1>Listing particeipants</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Trip</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @particeipants.each do |particeipant| %>
+  <tr>
+    <td><%= particeipant.email %></td>
+    <td><%= particeipant.trip_id %></td>
+    <td><%= particeipant.first_name %></td>
+    <td><%= particeipant.last_name %></td>
+    <td><%= link_to 'Show', particeipant %></td>
+    <td><%= link_to 'Edit', edit_particeipant_path(particeipant) %></td>
+    <td><%= link_to 'Destroy', particeipant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Particeipant', new_particeipant_path %>

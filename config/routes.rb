@@ -1,4 +1,14 @@
 RSite::Application.routes.draw do
+  resources :questions
+
+  resources :surveys
+
+  resources :answers
+
+  resources :particeipants
+
+  resources :trips
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

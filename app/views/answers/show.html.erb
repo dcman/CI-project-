@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Answer:</b>
+  <%= @answer.answer %>
+</p>
+
+<p>
+  <b>Particeipant:</b>
+  <%= @answer.particeipant_id %>
+</p>
+
+<p>
+  <b>Q n:</b>
+  <%= @answer.q_n_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  answer: MyString
+  particeipant_id: 1
+  q_n_id: 1
+
+two:
+  answer: MyString
+  particeipant_id: 1
+  q_n_id: 1
