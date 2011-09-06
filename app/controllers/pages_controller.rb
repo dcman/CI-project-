@@ -7,7 +7,7 @@ def index
     end
 end
 def about
-  @title = "About US"
+  @title = "About us"
   respond_to do |format|
     format.html
     format.xml 
