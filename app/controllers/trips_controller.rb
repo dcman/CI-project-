@@ -14,7 +14,7 @@ class TripsController < ApplicationController
   # GET /trips/1.xml
   def show
     @trip = Trip.find(params[:id])
-    @title = "Trips"
+    @title = "Trip"
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @trip }
@@ -25,7 +25,7 @@ class TripsController < ApplicationController
   # GET /trips/new.xml
   def new
     @trip = Trip.new
-    @title = "Trips"
+    @title = "New Trip"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @trip }
@@ -35,7 +35,7 @@ class TripsController < ApplicationController
   # GET /trips/1/edit
   def edit
     @trip = Trip.find(params[:id])
-    @title = "Trips"
+    @title = "Edit Trip"
 
   end
 
@@ -43,7 +43,7 @@ class TripsController < ApplicationController
   # POST /trips.xml
   def create
     @trip = Trip.new(params[:trip])
-    @title = "Trips"
+    @title = "Create Trip"
 
     respond_to do |format|
       if @trip.save
@@ -60,7 +60,7 @@ class TripsController < ApplicationController
   # PUT /trips/1.xml
   def update
     @trip = Trip.find(params[:id])
-    @title = "Trips"
+    @title = "Update Trip"
     respond_to do |format|
       if @trip.update_attributes(params[:trip])
         format.html { redirect_to(@trip, :notice => 'Trip was successfully updated.') }
@@ -75,6 +75,7 @@ class TripsController < ApplicationController
   # DELETE /trips/1
   # DELETE /trips/1.xml
   def destroy
+    @title = "Destroy Trip"
     @trip = Trip.find(params[:id])
     @trip.destroy
     

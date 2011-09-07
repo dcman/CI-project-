@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   # GET /questions.xml
   def index
     @questions = Question.all
-
+    @title = 'Questions'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @questions }
@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.xml
   def show
     @question = Question.find(params[:id])
-
+    @title = 'Show Question'
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @question }
@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new.xml
   def new
     @question = Question.new
-
+    @title = 'New Question'
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @question }
@@ -35,13 +35,14 @@ class QuestionsController < ApplicationController
   # GET /questions/1/edit
   def edit
     @question = Question.find(params[:id])
+    @title = 'Edit Question'
   end
 
   # POST /questions
   # POST /questions.xml
   def create
     @question = Question.new(params[:question])
-
+    @title = "Create Question"
     respond_to do |format|
       if @question.save
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
@@ -57,7 +58,7 @@ class QuestionsController < ApplicationController
   # PUT /questions/1.xml
   def update
     @question = Question.find(params[:id])
-
+    @title = 'Update Question'
     respond_to do |format|
       if @question.update_attributes(params[:question])
         format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
@@ -72,6 +73,7 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.xml
   def destroy
+    @title = 'Destroy Question'
     @question = Question.find(params[:id])
     @question.destroy
 

@@ -3,7 +3,7 @@ class SurveysController < ApplicationController
   # GET /surveys.xml
   def index
     @surveys = Survey.all
-
+    @title = "Surveys"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @surveys }
@@ -14,7 +14,7 @@ class SurveysController < ApplicationController
   # GET /surveys/1.xml
   def show
     @survey = Survey.find(params[:id])
-
+    @title = "Survey"
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @survey }
@@ -25,7 +25,7 @@ class SurveysController < ApplicationController
   # GET /surveys/new.xml
   def new
     @survey = Survey.new
-
+    @title = "New Survey"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @survey }
@@ -41,7 +41,7 @@ class SurveysController < ApplicationController
   # POST /surveys.xml
   def create
     @survey = Survey.new(params[:survey])
-
+    @title = "Create Survey"
     respond_to do |format|
       if @survey.save
         format.html { redirect_to(@survey, :notice => 'Survey was successfully created.') }
@@ -57,7 +57,7 @@ class SurveysController < ApplicationController
   # PUT /surveys/1.xml
   def update
     @survey = Survey.find(params[:id])
-
+    @title = "Update Survey"
     respond_to do |format|
       if @survey.update_attributes(params[:survey])
         format.html { redirect_to(@survey, :notice => 'Survey was successfully updated.') }
@@ -72,6 +72,7 @@ class SurveysController < ApplicationController
   # DELETE /surveys/1
   # DELETE /surveys/1.xml
   def destroy
+    @title = "Delete Survey"
     @survey = Survey.find(params[:id])
     @survey.destroy
 
