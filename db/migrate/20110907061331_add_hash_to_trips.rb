@@ -1,9 +1,9 @@
 class AddHashToTrips < ActiveRecord::Migration
   def self.up
-    add_column :trips, :hash, :string
+    add_column :trips, :sum, :string
   end
 
   def self.down
-    remove_column :trips, :hash
+    remove_column :trips, :sum
   end
 end
