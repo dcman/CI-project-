@@ -18,7 +18,7 @@ RSite::Application.routes.draw do
   match '/charters',   :to => 'pages#charters'
   match '/contact',   :to => 'pages#contact'
   match '/directions',   :to => 'pages#directions'
-  
+
   root :to => "pages#index"
 
 
