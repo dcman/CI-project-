@@ -6,7 +6,7 @@
     <th>Name</th>
     <th>Date</th>
     <th>Description</th>
-    <th></th>
+    <th>Sum</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,7 +15,8 @@
   <tr>
     <td><%= trip.name %></td>
     <td><%= trip.date %></td>
-    <td><%= trip.description %></td>
+    <td><%= trip.description.slice(0..9) %></td>
+    <td><%= trip.sum %></td>
     <td><%= link_to 'Show', trip %></td>
     <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
     <td><%= link_to 'Destroy', trip, :confirm => 'Are you sure?', :method => :delete %></td>
