@@ -1,53 +1,45 @@
 <%= render 'header'%>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"><b> <span style="font-size: 12.0pt; color: black"> Sailing Charters</span></b></font>
-</p>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"> <span style="font-size: 10.0pt; color: black"> BWhat better way to enjoy Channel Islands National Park than from
-			the deck of your own private yacht? The Santa Barbara Channel,
-			which runs between mainland California and Santa Cruz Island,
-			offers pristine sunsets, affable wildlife, and beautiful coastline.
-			Interestingly, this area is home to the greatest diversity of
-			cetaceans (whales and dolphins) than any other place on earth.
-			Sea lions and dozens of species of sea birds are also regular
-			visitors. The Channel Islands Center for Leadership and Team
-			Building can help you explore these sights on your very own vessel
-			with friends, family, or coworkers.</span></font>
-</p>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"><b> <span style="font-size: 12.0pt; color: black"> Day Charter for Family</span></b></font>
-</p>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"> <span style="font-size: 10.0pt; color: black"> For a group family and friends, almost nothing compares to a day
-			on the water. Young and old alike can take pleasure in a breath-taking
-			sail along the rugged California coast, accompanied by native dolphin
-			riding along the bow wave of your majestic sailing vessel. Teach
-			your kids the value of self-sufficiency at sea, learning the basics
-			of navigation and safe seamanship. Open their eyes to a world beyond
-			the television set, and experience firsthand the wonders of the sea.
-			Your own personal USCG-certified Captain will instruct you on seafaring
-			basics; or, you may relax and just take in the many sights that the
-			Channel Islands have to offer.
-			<br />
-			<%= link_to 'Contact', contact_path%> us for scheduling options and rates. </span></font>
-</p>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"><b> <span style="font-size: 12.0pt; color: black"> Day Charter for Businesses</span></b></font>
-</p>
-<p class="MsoNormal" style="line-height: 15.0pt">
-	<font face="Verdana"> <span style="font-size: 10.0pt; color: black"> Perhaps your employees need to be rewarded for a job well done, and
-			you would like to give them the trip of a lifetime. No previous sailing
-			experience is necessary, as you will be accompanied by your own
-			USCG-certified Captain aboard a gorgeous Beneteau 40’ sloop. Relax
-			with wine and hors d'oeuvres, watch the sunset, and gawk at the local
-			wildlife and remote island coastline. Or, if you prefer a more hands-on
-			approach, you may help the captain navigate for a more active day at sea.
-			<br />
-			<br />
-			<%= link_to 'Contact', contact_path%> us for scheduling options and rates.
-			<br />
-			If your organization is looking for an educational team building
-			experience, instead of a casual day at sea, please see our <%= link_to 'Services', services_path%>. </span></font>
-</p>
 <%= render 'side_bar'%>
+<div class="content">
+	<h2>Sailing Charters</h2>
+	<p>
+		What better way to enjoy Channel Islands National Park than from
+		the deck of your own private yacht? The Santa Barbara Channel,
+		which runs between mainland California and Santa Cruz Island,
+		offers pristine sunsets, affable wildlife, and beautiful coastline.
+		Interestingly, this area is home to the greatest diversity of
+		cetaceans (whales and dolphins) than any other place on earth.
+		Sea lions and dozens of species of sea birds are also regular
+		visitors. The Channel Islands Center for Leadership and Team
+		Building can help you explore these sights on your very own vessel
+		with friends, family, or coworkers.
+	</p>
+	<h2>Day Charter for Family</h2>
+	<p>
+		For a group family and friends, almost nothing compares to a day
+		on the water. Young and old alike can take pleasure in a breath-taking
+		sail along the rugged California coast, accompanied by native dolphin
+		riding along the bow wave of your majestic sailing vessel. Teach
+		your kids the value of self-sufficiency at sea, learning the basics
+		of navigation and safe seamanship. Open their eyes to a world beyond
+		the television set, and experience firsthand the wonders of the sea.
+		Your own personal USCG-certified Captain will instruct you on seafaring
+		basics; or, you may relax and just take in the many sights that the
+		Channel Islands have to offer.
+		<%= link_to 'Contact', contact_path%> us for scheduling options and rates.
+	</p>
+	<h2>Day Charter for Businesses</h2>
+	<p>
+		Perhaps your employees need to be rewarded for a job well done, and
+		you would like to give them the trip of a lifetime. No previous sailing
+		experience is necessary, as you will be accompanied by your own
+		USCG-certified Captain aboard a gorgeous Beneteau 40’ sloop. Relax
+		with wine and hors d'oeuvres, watch the sunset, and gawk at the local
+		wildlife and remote island coastline. Or, if you prefer a more hands-on
+		approach, you may help the captain navigate for a more active day at sea.
+		<%= link_to 'Contact', contact_path%> us for scheduling options and rates.
+		If your organization is looking for an educational team building
+		experience, instead of a casual day at sea, please see our <%= link_to 'Services', services_path%>.
+	</p>
+</div><!-- end of context -->
 <%= render 'footer'%> 
