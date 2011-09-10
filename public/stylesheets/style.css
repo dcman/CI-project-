@@ -93,6 +93,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
 }
 .content p{
+	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
 }
@@ -154,7 +155,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	line-height: 0px;
 }
 banner_image {
-
 	max-width: 1260px;
 	min-width: 1054px;
 	max-height: 149px;
@@ -200,7 +200,7 @@ banner_image {
 	background: #00a1e0;
 	padding: 0px;
 	margin-top: 0;
-	max-width: 13%;
+	max-width: 15%;
 	-moz-border-radius-bottomright: 20px;
 	-webkit-border-bottom-right-radius: 20px;
 }
