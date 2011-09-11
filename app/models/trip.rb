@@ -3,9 +3,9 @@ date_format = /^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d
 
 
   has_one    :survey
-    has_many :question, :through => :survey 
+  has_many   :question
   has_many   :particeipant
-    has_many :answer, :through => :particeipant
+  has_many   :answer
 
 
 validates :sum, :presence => true,

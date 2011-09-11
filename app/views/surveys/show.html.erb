@@ -17,5 +17,7 @@
 
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
-<%= link_to 'Back', surveys_path %>
+<%= link_to 'Back', surveys_path %> |
+<%= link_to 'Trip', "/trips/#{@survey.trip_id}"%> |
+<%= link_to 'New Question', new_question_path(:survey_id => @survey.id)%>
 

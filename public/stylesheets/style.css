@@ -205,3 +205,11 @@ banner_image {
 	-moz-border-radius-bottomright: 20px;
 	-webkit-border-bottom-right-radius: 20px;
 }
+.debug_dump{
+	color: red;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14pt;
+	background: black;
+	padding-left: 30%;
+	
+}

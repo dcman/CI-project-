@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new
+    @question = Question.new(:survey_id => params[:survey_id])
     @title = 'New Question'
     respond_to do |format|
       format.html # new.html.erb

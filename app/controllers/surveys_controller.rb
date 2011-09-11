@@ -24,7 +24,7 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   # GET /surveys/new.xml
   def new
-    @survey = Survey.new
+    @survey = Survey.new(:trip_id => params[:trip_id])
     @title = "New Survey"
     respond_to do |format|
       format.html # new.html.erb

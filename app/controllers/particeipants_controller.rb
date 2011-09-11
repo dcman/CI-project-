@@ -24,7 +24,7 @@ class ParticeipantsController < ApplicationController
   # GET /particeipants/new
   # GET /particeipants/new.xml
   def new
-    @particeipant = Particeipant.new
+    @particeipant = Particeipant.new(:trip_id => params[:trip_id])
     @title = 'New Particeipant'
     respond_to do |format|
       format.html # new.html.erb
