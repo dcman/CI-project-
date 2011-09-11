@@ -59,7 +59,6 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	font-size: 200%;
 	text-align: center;
 	color: #00a1e0;
-/*	padding-left: 19%;*/
 	-moz-border-radius: 35px;
 	-webkit-border-radius: 35px;
 }
@@ -78,7 +77,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 	float: right;
 	width: 20%;
-	background: #F00;
+/*	background: #F00;*/
+	background-color: white;
 	padding-top: 0px;
 	padding-bottom: 10px;
 	-moz-border-radius: 30px;
