@@ -25,8 +25,9 @@ class SurveysController < ApplicationController
   # GET /surveys/new.xml
   def new
     @survey = Survey.new(:trip_id => params[:trip_id])
+    @survey.update_attribute(:date, @survey.trip.date)
     @title = "New Survey"
-    respond_to do |format|
+      respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @survey }
     end

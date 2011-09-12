@@ -27,7 +27,7 @@ class ParticeipantsController < ApplicationController
     @particeipant = Particeipant.new(:trip_id => params[:trip_id])
     @title = 'New Particeipant'
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.xml  { render :xml => @particeipant }
     end
   end
@@ -45,7 +45,7 @@ class ParticeipantsController < ApplicationController
     @title = 'Create Particeipant'
     respond_to do |format|
       if @particeipant.save
-        format.html { redirect_to(@particeipant, :notice => 'Particeipant was successfully created.') }
+        format.html { redirect_to("/trips/" + @particeipant.trip_id.to_s ) }
         format.xml  { render :xml => @particeipant, :status => :created, :location => @particeipant }
       else
         format.html { render :action => "new" }
@@ -77,7 +77,7 @@ class ParticeipantsController < ApplicationController
     @particeipant.destroy
     @title = "Destroy Particeipant"
     respond_to do |format|
-      format.html { redirect_to(particeipants_url) }
+      format.html { redirect_to("/trips/" + @particeipant.trip_id.to_s) }
       format.xml  { head :ok }
     end
   end

@@ -1,25 +1,38 @@
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @trip.name %>
+<p id="notice">
+	<%= notice %>
 </p>
-
 <p>
-  <b>Date:</b>
-  <%= @trip.date %>
+	<b>Name:</b>
+	<%= @trip.name %>
 </p>
-
 <p>
-  <b>Description:</b>
-  <%= @trip.description %>
+	<b>Date:</b>
+	<%= @trip.date %>
 </p>
-
-
+<p>
+	<b>Description:</b>
+	<%= @trip.description %>
+</p>
+<div class="people">
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+		</tr>
+		<%@trip.particeipant.each do |p|%>
+		<tr>
+			<td><%= p.first_name %></td>
+			<td><%= p.last_name %></td>
+			<td><%= p.email %></td>
+			<td><%= link_to 'Edit', edit_particeipant_path(p.id) %></td>
+			<td><%= link_to 'Destroy', p, {:confirm => 'Are you sure?', :method => :delete,:trip_id => @trip.id }%></td>
+		</tr>
+		<%end%>
+			<%= link_to 'Add Person', new_particeipant_path(:trip_id => @trip.id)%>
+	</table>
+</div>
 <%= link_to 'Edit', edit_trip_path(@trip) %> |
 <%= link_to 'Back', trips_path %> |
 <%= link_to 'Survey', survey_path(@trip.survey.id) if @trip.survey%>
-<%= link_to 'Survey', new_survey_path(:trip_id => @trip.id) if !@trip.survey%> |
-<%= link_to 'Particeipant', new_particeipant_path(:trip_id => @trip.id)%>
-
+<%= link_to 'Survey', new_survey_path(:trip_id => @trip.id) if !@trip.survey%>
