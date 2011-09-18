@@ -14,6 +14,7 @@ class ParticeipantsController < ApplicationController
   # GET /particeipants/1.xml
   def show
     @particeipant = Particeipant.find(params[:id])
+    @survey = @particeipant.trip.survey
     @title = 'Particeipant'
     respond_to do |format|
       format.html # show.html.erb

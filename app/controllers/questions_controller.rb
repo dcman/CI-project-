@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new(:survey_id => params[:survey_id])
+    @question = Question.new(:survey_id => params[:survey_id],:q_n => params[:q_n])
     @title = 'New Question'
     respond_to do |format|
       format.html # new.html.erb
@@ -78,7 +78,7 @@ class QuestionsController < ApplicationController
     @question.destroy
 
     respond_to do |format|
-      format.html { redirect_to(questions_url) }
+      format.html { redirect_to('/surveys/' + @question.survey.id.to_s + '?f=true') }
       format.xml  { head :ok }
     end
   end

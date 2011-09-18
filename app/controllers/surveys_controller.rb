@@ -15,6 +15,7 @@ class SurveysController < ApplicationController
   def show
     @survey = Survey.find(params[:id])
     @title = "Survey"
+    fix(@survey) if params[:f] = 't'
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @survey }
@@ -82,4 +83,10 @@ class SurveysController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  def fix (s)
+    s.question.each_with_index do |q,i|
+    q.update_attribute(:q_n, i + 1)
+  end
+    # redirect_to(s)
+ end
 end

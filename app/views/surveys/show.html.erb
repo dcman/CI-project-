@@ -1,23 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @survey.name %>
+<p id="notice">
+	<%= notice %>
 </p>
-
 <p>
-  <b>Trip:</b>
-  <%= @survey.trip_id %>
+	<b>Name:</b>
+	<%= @survey.name %>
 </p>
-
 <p>
-  <b>Date:</b>
-  <%= @survey.date %>
+	<b>Trip:</b>
+	<%= @survey.trip_id %>
 </p>
-
-
+<p>
+	<b>Date:</b>
+	<%= @survey.date %>
+</p>
+<p>
+<div class="qustions">
+	<table>
+		<tr>
+			<th>Number</th>
+			<th>Question</th>
+		</tr>
+		<tr>
+			<%@survey.question.each do|q|%>
+			<td><%= q.q_n %></td>
+			<td><%= q.question%></td>
+			<td><%= link_to 'Edit', edit_question_path(q.id) %></td>
+			<td><%= link_to 'Destroy', q, {:confirm => 'Are you sure?', :method => :delete,:survey_id => @survey.id }%></td>
+		</tr>
+		<%end%>
+		<%= link_to 'New Question', new_question_path(:survey_id => @survey.id,:q_n => @survey.question.length + 1)%> 
+	</table>
+</div>
+</p>
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %> |
-<%= link_to 'Trip', "/trips/#{@survey.trip_id}"%> |
-<%= link_to 'New Question', new_question_path(:survey_id => @survey.id)%>
-
+<%= link_to 'Trip', "/trips/#{@survey.trip_id}"%>
