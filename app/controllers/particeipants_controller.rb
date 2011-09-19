@@ -16,6 +16,7 @@ class ParticeipantsController < ApplicationController
     @particeipant = Particeipant.find(params[:id])
     @survey = @particeipant.trip.survey
     @title = 'Particeipant'
+    @i =1
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @particeipant }

@@ -2,5 +2,6 @@
 <%@survey.question.each_with_index do|q,i|%> 
 <b><%= q.q_n %>.
 <%= q.question%><br /></b>
-<p><%= @particeipant.answer.find_by_q_n_id(i + 1).answer %><br /></p>
+<%a = @particeipant.answer.find_by_q_n_id(i + 1)%>
+<p><%= a.answer if a%><br /></p>
 <%end%>

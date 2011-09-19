@@ -1,0 +1,5 @@
+<%@survey.question.each_with_index do |@q,i|%>
+<%@a = @particeipant.answer.find_by_q_n_id(i+1)%>
+<%=render 'answer_edit' if @a.class != NilClass%>
+<%=render 'answer_new'  if @a.class == NilClass%>
+<%end%>

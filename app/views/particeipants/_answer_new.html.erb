@@ -1,0 +1,14 @@
+<%@a = Answer.create([:particeipant_id => @particeipant.id,:q_n_id => @q.q_n] )%>
+<%form_for(@a) do |f|%>
+  <div class="field">
+    <%= f.label @q.question %><br />
+    <%= f.hidden_field :id%>
+    <%= f.hidden_field :particeipant_id%>
+    <%= f.hidden_field :q_n_id%>
+    <%= f.text_area :answer, :rows => 6 %>
+  </div>
+    <div class="actions">
+    <%= f.submit %>
+    
+  </div>
+<%end%>
