@@ -1,4 +1,6 @@
 RSite::Application.routes.draw do
+  resources :admins
+
   resources :questions
 
   resources :surveys
