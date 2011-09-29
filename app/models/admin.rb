@@ -29,6 +29,12 @@ class Admin < ActiveRecord::Base
     encrypted_password == encrypt(submitted_password)
   end
 
+  def self.authenticate(email, submitted_password)
+    admin = find_by_email(email)
+    return nil  if admin.nil?
+    return admin if admin.has_password?(submitted_password)
+  end
+
   private
 
   def encrypt_password
