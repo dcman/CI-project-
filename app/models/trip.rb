@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: trips
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)
+#  date        :string(255)
+#  description :text(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  sum         :string(255)
+#
+
 class Trip < ActiveRecord::Base
 date_format = /^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d$/
 

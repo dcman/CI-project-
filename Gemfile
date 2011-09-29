@@ -7,6 +7,10 @@ gem 'rake', '0.8.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+group :development do
+  gem 'rspec-rails', '2.6.1'
+  gem 'annotate', '2.4.0'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'

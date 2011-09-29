@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: particeipants
+#
+#  id         :integer         not null, primary key
+#  email      :string(255)
+#  trip_id    :integer
+#  first_name :string(255)
+#  last_name  :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:

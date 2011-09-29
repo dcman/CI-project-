@@ -1,4 +1,6 @@
 RSite::Application.routes.draw do
+  get "admins/new"
+
   resources :admins
 
   resources :questions
