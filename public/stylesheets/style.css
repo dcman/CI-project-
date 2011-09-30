@@ -278,6 +278,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
   font-size: 12px;
   list-style: square;
 }
-.map{
-
+.greenbox{
+padding-left: 50%;
 }
