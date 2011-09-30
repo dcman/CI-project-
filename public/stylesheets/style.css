@@ -5,9 +5,13 @@ body {
 	margin: 0;
 	padding: 0;
 	color: #000;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
 }
 body {
 	background-color: #F0F1F4;
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
 }
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -61,6 +65,15 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	color: #00a1e0;
 	-moz-border-radius: 35px;
 	-webkit-border-radius: 35px;
+	max-width: 100%;
+	min-width: 80%;
+	max-height: 62px;
+}
+.header img {
+	max-width: 100%;
+	min-width: 80%;
+
+	
 }
 /* ~~ These are the columns for the layout. ~~
 
@@ -204,7 +217,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 }
 .tabs {
 
-	padding-left: 14%;
+	padding-left: 13%;
 }
 .head_bar {
 	text-align: center;
@@ -225,7 +238,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	background: black;
 	padding-left: 30%;
 }
-field_with_errors {
+.field_with_errors {
   margin-top: 10px;
   padding: 2px;
   background-color: red;
@@ -264,4 +277,7 @@ field_with_errors {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+.map{
+
 }

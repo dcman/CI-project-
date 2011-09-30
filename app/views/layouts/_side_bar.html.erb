@@ -1,4 +1,11 @@
 <div class="sidebar1">
-    <p><h3>Header for side bar</h3></p>
-    <p>Side bar text</p>
-  <!-- end .sidebar1 --></div>
+	<% if @title == "Directions"%>
+	<div class="map">
+	<iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=3700+S+Peninsula+Rd,+Oxnard,+CA+93035&amp;aq=t&amp;sll=37.0625,-95.677068&amp;sspn=33.710275,86.572266&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=3700+Peninsula+Rd,+Oxnard,+California+93035&amp;t=m&amp;z=14&amp;ll=34.168177,-119.225222&amp;output=embed"></iframe>
+	</div>
+	<p> 
+	 3700 Peninsula Rd <br>
+	 Oxnard, CA 93035 <br>
+	</p>
+	<%end%>
+</div>
