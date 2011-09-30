@@ -276,7 +276,8 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 
 #error_explanation ul li {
   font-size: 12px;
-  list-style: square;
+  list-style: none;
+  padding: 4px;
 }
 .greenbox{
 padding-left: 50%;
