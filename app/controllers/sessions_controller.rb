@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in admin
-      redirect_to :back
+      redirect_to "/admin"
     end
   end
   
