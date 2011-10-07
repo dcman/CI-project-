@@ -10,8 +10,3 @@ hash = [:name => "Justin", :email => "srwaxalot@gmail.com",
   :salt => "615c00fcf2e5b720243883a711e2026fb23b5de8f1343adaf4b1e9a05dac1f75"]
 puts 'creating admin'
 admin = Admin.create(hash)
-if admin.save
-  puts 'saved'
-else 
-  pust 'faild'
-end
