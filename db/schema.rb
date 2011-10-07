@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20110929192354) do
   create_table "trips", :force => true do |t|
     t.string   "name"
     t.string   "date"
-    t.text     "description", :limit => 255
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "sum"
