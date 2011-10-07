@@ -85,6 +85,9 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.30)
 
+PLATFORMS
+  x86-mingw32
+
 DEPENDENCIES
   annotate (= 2.4.0)
   rails (= 3.0.9)
