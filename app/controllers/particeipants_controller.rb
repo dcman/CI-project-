@@ -2,12 +2,7 @@ class ParticeipantsController < ApplicationController
   # GET /particeipants
   # GET /particeipants.xml
   def index
-    @particeipants = Particeipant.all
-    @title = "Particeipants"
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @particeipants }
-    end
+  redirect_to '/admin'
   end
 
   # GET /particeipants/1

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Name</th>
+  </tr>
+  <% @admins.each do |a| %>
+  <tr>
+    <td><%= a.email %></td>
+    <td><%= a.name %></td>
+	<% if current_admin != a%>
+    <td><%= link_to 'Destroy', a, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%else%>
+   	<td><%= link_to 'Edit', edit_admin_path(a) %></td>
+   	<%end%>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= link_to 'New Admin', new_admin_path %>| 
+<%= link_to 'Admin', '/admin'%>

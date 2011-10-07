@@ -8,4 +8,11 @@
 	 Oxnard, CA 93035 <br />
 	</p>
 	<%end%>
+	<% if signed_in?%>
+	<% if @title == "Directions"%>
+	<%else%>
+	<%= link_to "Trips", '/trips'%><br />
+	<%= link_to "Sign out", '/signout'%>
+	<%end%>
+	<%end%>
 </div>

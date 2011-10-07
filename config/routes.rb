@@ -1,5 +1,5 @@
 RSite::Application.routes.draw do
-  get "admins/new"
+  resources :sessions, :only => [:new, :create, :destroy]
 
   resources :admins
 
@@ -22,7 +22,8 @@ RSite::Application.routes.draw do
   match '/charters',   :to => 'pages#charters'
   match '/contact',   :to => 'pages#contact'
   match '/directions',   :to => 'pages#directions'
-
+  match '/admin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   root :to => "pages#index"
 
 

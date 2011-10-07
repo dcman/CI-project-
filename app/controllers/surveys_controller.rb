@@ -2,12 +2,7 @@ class SurveysController < ApplicationController
   # GET /surveys
   # GET /surveys.xml
   def index
-    @surveys = Survey.all
-    @title = "Surveys"
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @surveys }
-    end
+  redirect_to '/admin'
   end
 
   # GET /surveys/1

@@ -1,4 +1,22 @@
+<p>
+  <b>Email:</b>
+  <%= @particeipant.email %>
+</p>
 
+<p>
+  <b>Trip:</b>
+  <%= @particeipant.trip_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @particeipant.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @particeipant.last_name %>
+</p>
 <%@survey.question.each_with_index do|q,i|%> 
 <b><%= q.q_n %>.
 <%= q.question%><br /></b>

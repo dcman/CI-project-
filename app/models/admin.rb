@@ -35,6 +35,11 @@ class Admin < ActiveRecord::Base
     return admin if admin.has_password?(submitted_password)
   end
 
+  def self.authenticate_with_salt(id, cookie_salt)
+    admin = find_by_id(id)
+   (admin && admin.salt == cookie_salt) ? admin : nil
+  end
+
   private
 
   def encrypt_password

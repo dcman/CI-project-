@@ -1,27 +1,10 @@
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Email:</b>
-  <%= @particeipant.email %>
-</p>
-
-<p>
-  <b>Trip:</b>
-  <%= @particeipant.trip_id %>
-</p>
-
-<p>
-  <b>First name:</b>
-  <%= @particeipant.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @particeipant.last_name %>
-</p>
+<%if signed_in?%>
 <%=render "admin_form"%>
-<%= render "user_form"%>
 <%= link_to 'Edit', edit_particeipant_path(@particeipant) %> |
-<%= link_to 'Back', particeipants_path %>
+<%= link_to 'Back', :back%>
+<%else%>
+<%= render "user_form"%>
+<%end%>
+
+
 

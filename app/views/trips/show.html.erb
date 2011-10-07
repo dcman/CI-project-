@@ -28,6 +28,7 @@
 			<td><%= p.email %></td>
 			<td><%= link_to 'Edit', edit_particeipant_path(p.id) %></td>
 			<td><%= link_to 'Destroy', p, {:confirm => 'Are you sure?', :method => :delete,:trip_id => @trip.id }%></td>
+			<td><%= link_to 'Show', "/particeipants/#{p.id}"%></td>
 		</tr>
 		<%end%>
 			<%= link_to 'Add Person', new_particeipant_path(:trip_id => @trip.id)%>

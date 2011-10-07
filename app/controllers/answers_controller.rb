@@ -2,12 +2,7 @@ class AnswersController < ApplicationController
   # GET /answers
   # GET /answers.xml
   def index
-    @answers = Answer.all
-    @title = 'Answers'
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @answers }
-    end
+  redirect_to '/admin'
   end
 
   # GET /answers/1
@@ -45,7 +40,7 @@ class AnswersController < ApplicationController
     @title = 'Create Answer'
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to(@answer, :notice => 'Answer was successfully created.') }
+        format.html { redirect_to :back }
         format.xml  { render :xml => @answer, :status => :created, :location => @answer }
       else
         format.html { render :action => "new" }
@@ -61,7 +56,7 @@ class AnswersController < ApplicationController
     @title = 'Update Anster'
     respond_to do |format|
       if @answer.update_attributes(params[:answer])
-        format.html { redirect_to(@answer, :notice => 'Answer was successfully updated.') }
+        format.html { redirect_to :back }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

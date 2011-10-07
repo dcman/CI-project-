@@ -2,12 +2,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-    @questions = Question.all
-    @title = 'Questions'
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @questions }
-    end
+  redirect_to '/admin'
   end
 
   # GET /questions/1
@@ -61,7 +56,7 @@ class QuestionsController < ApplicationController
     @title = 'Update Question'
     respond_to do |format|
       if @question.update_attributes(params[:question])
-        format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
+        format.html { redirect_to :back}
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
