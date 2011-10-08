@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_filter :authenticate
   # GET /trips
   # GET /trips.xml
   def index
@@ -85,5 +86,10 @@ class TripsController < ApplicationController
       format.html { redirect_to(trips_url) }
       format.xml  { head :ok }
     end
+  end
+  private
+
+  def authenticate
+    deny_access unless signed_in?
   end
 end

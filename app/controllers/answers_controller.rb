@@ -1,8 +1,9 @@
 class AnswersController < ApplicationController
+  before_filter :authenticate
   # GET /answers
   # GET /answers.xml
   def index
-  redirect_to '/admin'
+    redirect_to '/admin'
   end
 
   # GET /answers/1
@@ -75,5 +76,10 @@ class AnswersController < ApplicationController
       format.html { redirect_to(answers_url) }
       format.xml  { head :ok }
     end
+  end
+  private
+
+  def authenticate
+    deny_access unless signed_in?
   end
 end

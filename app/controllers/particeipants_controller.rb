@@ -1,8 +1,9 @@
 class ParticeipantsController < ApplicationController
+  before_filter :authenticate, :except =>[:show]
   # GET /particeipants
   # GET /particeipants.xml
   def index
-  redirect_to '/admin'
+    redirect_to '/admin'
   end
 
   # GET /particeipants/1
@@ -24,7 +25,7 @@ class ParticeipantsController < ApplicationController
     @particeipant = Particeipant.new(:trip_id => params[:trip_id])
     @title = 'New Particeipant'
     respond_to do |format|
-      format.html 
+      format.html
       format.xml  { render :xml => @particeipant }
     end
   end
@@ -77,5 +78,10 @@ class ParticeipantsController < ApplicationController
       format.html { redirect_to("/trips/" + @particeipant.trip_id.to_s) }
       format.xml  { head :ok }
     end
+  end
+  private
+
+  def authenticate
+    deny_access unless signed_in?
   end
 end

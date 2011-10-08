@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController
+  before_filter :authenticate
   def index
-  redirect_to '/admin'
+    redirect_to '/admin'
   end
 
   def new
@@ -47,5 +48,10 @@ class AdminsController < ApplicationController
       @admin.destroy
       redirect_to admins_path, :flash => { :notice => "Admin destroyed." }
     end
+  end
+  private
+
+  def authenticate
+    deny_access unless signed_in?
   end
 end

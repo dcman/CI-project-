@@ -1,8 +1,9 @@
 class SurveysController < ApplicationController
+  before_filter :authenticate
   # GET /surveys
   # GET /surveys.xml
   def index
-  redirect_to '/admin'
+    redirect_to root_path
   end
 
   # GET /surveys/1
@@ -23,7 +24,7 @@ class SurveysController < ApplicationController
     @survey = Survey.new(:trip_id => params[:trip_id])
     @survey.update_attribute(:date, @survey.trip.date)
     @title = "New Survey"
-      respond_to do |format|
+    respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @survey }
     end
@@ -78,10 +79,17 @@ class SurveysController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
   def fix (s)
     s.question.each_with_index do |q,i|
-    q.update_attribute(:q_n, i + 1)
+      q.update_attribute(:q_n, i + 1)
+    end
+  # redirect_to(s)
   end
-    # redirect_to(s)
- end
+
+  private
+
+  def authenticate
+    deny_access unless signed_in?
+  end
 end

@@ -1,8 +1,9 @@
 class QuestionsController < ApplicationController
+  before_filter :authenticate
   # GET /questions
   # GET /questions.xml
   def index
-  redirect_to '/admin'
+    redirect_to '/admin'
   end
 
   # GET /questions/1
@@ -76,5 +77,10 @@ class QuestionsController < ApplicationController
       format.html { redirect_to('/surveys/' + @question.survey.id.to_s + '?f=true') }
       format.xml  { head :ok }
     end
+  end
+  private
+
+  def authenticate
+    deny_access unless signed_in?
   end
 end
