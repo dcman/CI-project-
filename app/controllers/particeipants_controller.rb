@@ -1,5 +1,5 @@
 class ParticeipantsController < ApplicationController
-  before_filter :authenticate, :except =>[:show]
+ # before_filter :authenticate, :except =>[:show]
   # GET /particeipants
   # GET /particeipants.xml
   def index
