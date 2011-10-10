@@ -1,8 +1,8 @@
 <% @title = 'Welcome'%>
-<%@i = 1%>
-<%@survey.question.each do |@q|%>
-	<% @a = @particeipant.answer.find_by_q_n_id(@i)%>
+
+<%@survey.question.each_with_index do |arg,i|%>
+	<% @q = arg%>
+	<% @a = @particeipant.answer.find_by_q_n_id(i+1)%>
 	<%= render 'answer_edit' if @a.class != NilClass%>
 	<%= render 'answer_new'  if @a.class == NilClass%>
-	<%@i+=1%>
 <%end%> 
