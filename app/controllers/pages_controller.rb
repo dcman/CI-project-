@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 def index
   @title = "Welcome"
   respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.xml  
     end
 end
@@ -51,6 +51,13 @@ end
 def faq
   @title = "FAQ"
   respond_to do |format|
+    format.html 
+    format.xml
+  end
+end
+def feedback
+  @title = "Feed back"
+    respond_to do |format|
     format.html 
     format.xml
   end

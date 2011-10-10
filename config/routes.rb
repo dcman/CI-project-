@@ -1,4 +1,5 @@
 RSite::Application.routes.draw do
+
   resources :sessions, :only => [:new, :create, :destroy]
 
   resources :admins
