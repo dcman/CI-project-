@@ -12,11 +12,17 @@ class ParticeipantsController < ApplicationController
     @particeipant = Particeipant.find(params[:id])
     @survey = @particeipant.trip.survey
     @title = 'Particeipant'
-    @i =1
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @particeipant }
+    @i = 1
+    if @particeipant.id.to_s == cookies[:id]
+          respond_to do |format|
+            format.html # show.html.erb
+            format.xml  { render :xml => @particeipant }
+          end
+    else
+      redirect_to feedback_path
     end
+    
+
   end
 
   # GET /particeipants/new

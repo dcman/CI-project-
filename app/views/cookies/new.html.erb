@@ -1,0 +1,12 @@
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>"><%= value %></div> <br />
+<% end %> 
+<%form_for(:cookies, :url => '/cookies') do |f|%>
+<div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+</div>
+<div class="actions">
+    <%= f.submit %>
+</div>
+<%end%>
